@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politiker tinder</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>folketingets ministre og partiformænd</h1>
+    <ul class="politician-list">
+        <% politikere.forEach(politikeren => { %>
+            <li>
+                <span class="politician-name"><%= politikeren.navn %></span>
+                <span class="politician-parti">Parti: <%= politikeren.parti %></span>
+                <span class="politician-stilling">Stilling: <%= politikeren.stilling %></span>
+
+                <div class="politician-actions"> <!-- Wrapper for actions -->
+                    <form action="/politiker/<%= politikeren.id %>/update" method="GET" style="display: inline;">
+                        <button type="submit">Opdater</button>
+                    </form>
+                    <form action="/politiker/<%= politikeren.id %>/delete" method="POST" style="display: inline;">
+                        <button type="submit">Slet</button>
+                    </form>
+                </div>
+            </li>
+        <% }) %>
+    </ul>
+    <a href="/add">Tilføj Politiker</a>
+</div>
+</body>
+</html>

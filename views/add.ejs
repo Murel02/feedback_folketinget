@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilføj Ny Politiker</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Tilføj Ny Politiker</h1>
+    <form action="/politiker" method="POST">
+        <label>Navn: <input type="text" name="navn" required></label><br>
+        <label>Parti: <input type="text" name="parti" required></label><br>
+        <label>Stilling: <input type="text" name="stilling" required></label><br>
+        <button type="submit">Tilføj Politiker</button>
+    </form>
+    <br>
+    <a href="/">Tilbage til oversigten</a>
+</div>
+</body>
+</html>

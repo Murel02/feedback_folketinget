@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdater Politiker</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Opdater Politiker</h1>
+    <form action="/politiker/<%= politiker.id %>/update" method="POST" class="update-form">
+        <label>Navn:
+            <input type="text" name="navn" value="<%= politiker.navn %>" required></label><br>
+        <label>Parti:
+            <input type="text" name="parti" value="<%= politiker.parti %>" required></label><br>
+        <label>Stilling:
+            <input type="text" name="stilling" value="<%= politiker.stilling %>" required></label><br>
+        <button type="submit">Gem Ændringer</button>
+    </form>
+    <a href="/" class="back-link">Tilbage til oversigten</a>
+</div>
+</body>
+</html>
